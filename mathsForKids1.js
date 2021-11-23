@@ -65,7 +65,7 @@ const number = parseFloat(this.textContent)
       document.querySelector(".wrapper").style.display="grid";
       document.querySelector(".well-done").style.display="none";
       starsGained();
-    }, 1000);
+    }, 3000);
   } else {
     const incorrect = new Audio("Sounds/incorrect.mp3");
     incorrect.play();
@@ -76,8 +76,10 @@ const number = parseFloat(this.textContent)
 //stars gained
 function starsGained() {
   // resetStars()
-  if (count === 100) {
+  if (count === 5) {
+    //reset score to 0.
     document.querySelector(".star-number").textContent = "0/100";
+    resetScore();
     // add stars to score.
     document.querySelector(".wrapper").style.display="none";
     document.querySelector(".well-done").style.display="none";
@@ -93,9 +95,14 @@ function keepScore(){
   console.log(count);
 }
 
+function resetScore() {
+  window.localStorage.removeItem("star-score");
+  document.querySelector(".star-number").textContent = "0/100";
+  location.reload();
+}
 
 
-
+document.querySelector(".small-star").addEventListener("click", resetScore);
 
 
 
@@ -113,7 +120,7 @@ function keepScore(){
 
 
 //What i have learned.
-
+//how to add an item to the local storage, and manipulate as needed.
 //Do not add the random number code to a variable, this just saves one random number only, this is no good if you want to record and push multiple diferent random numbers.
 
 

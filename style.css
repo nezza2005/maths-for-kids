@@ -14,6 +14,11 @@ header{
   background: #FE4A49;
 }
 
+p {
+  color: gold;
+}
+
+
 .container{
   width: 95%;
   margin: auto;
@@ -28,12 +33,15 @@ header{
 
 .nav h2{
   font-size: 2rem;
-  float: left;
+  /* float: none; */
+  text-align: center;
 }
 
-nav{
-  float: right;
+ol h3 {
+font-size: 1.5rem;
+text-align: center;
 }
+
 
 nav ul{
   list-style-type: none;
@@ -42,7 +50,8 @@ nav ul{
 nav li{
   font-size: 1.3rem;
   margin-top: 5px;
-  float: left;
+  float: right;
+  display: inline-block;
   padding: 0 15px;
 }
 
@@ -50,6 +59,8 @@ nav a{
   text-decoration: none;
   color: #fff;
 }
+
+
 
 .current a::after{
   content: '-';
@@ -104,6 +115,7 @@ nav a{
     text-align: center;
   }
 
+
   nav{
     float: none;
     display: flex;
@@ -140,25 +152,24 @@ nav a{
 }
 
 .well-done img {
-  height: 300px;
+  height: 200px;
 }
 
-p {
-  color: gold;
-}
+
 
 .small-star {
   height: 30px;
+  display: inline-block;
+  /* vertical-align: middle; */
 }
 
-#stars {
-position: relative;
-right: 350px;
+.star-number {
+  float: left;
 }
-
 
 #stars li {
-  padding: 3px;
+padding: 0 5px;
+display: inline-block;
 }
 
 
@@ -176,12 +187,18 @@ right: 350px;
 @media(max-width:768px){
   #stars{
     font-size: 1.5rem;
-    float: none;
-    text-align: center;
+  position: relative;
+  width: 30%;
+  margin: auto;
   }
 
 @media(max-width:480px){
   #stars{
     float: none;
-    text-align: center;
   }
+
+@media (max-width:480px) {
+  .well-done img {
+    height: 150px;
+  }
+}
