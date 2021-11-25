@@ -179,7 +179,7 @@ nav a{
   #stars{
   font-size: 1.5rem;
   position: relative;
-  width: 50%;   /*This changes the center for star score */
+  width: 51%;   /*This changes the center for star score */
   margin: auto;
   }
 }
