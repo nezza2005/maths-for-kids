@@ -65,7 +65,7 @@ const number = parseFloat(this.textContent)
       document.querySelector(".wrapper").style.display="grid";
       document.querySelector(".well-done").style.display="none";
       starsGained();
-    }, 3000);
+    }, 1000);
   } else {
     const incorrect = new Audio("Sounds/incorrect.mp3");
     incorrect.play();
@@ -76,7 +76,7 @@ const number = parseFloat(this.textContent)
 //stars gained
 function starsGained() {
   // resetStars()
-  if (count === 1) {
+  if (count === 100) {
     //reset score to 0.
     document.querySelector(".star-number").textContent = "0/100";
 //Display well done completion message.
@@ -86,7 +86,7 @@ function starsGained() {
 //restart game at zero score.
     setTimeout(function() {
       resetScore();
-    }, 5000);
+    }, 3000);
 
   } else if (count >0) {
   document.querySelector(".star-number").textContent = count + "/100";
