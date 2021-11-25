@@ -154,6 +154,7 @@ nav a{
 
 .well-done img {
   height: 200px;
+  padding-top: 10px;
 }
 
 @media (max-width:510px) {
@@ -178,7 +179,7 @@ nav a{
   #stars{
   font-size: 1.5rem;
   position: relative;
-  width: 34%;   /*This changes the center for star score */
+  width: 50%;   /*This changes the center for star score */
   margin: auto;
   }
 }
@@ -194,11 +195,11 @@ nav a{
 
 
 /* styling for completion message after reaching 100 stars. */
-
 .all-stars {
   color: blue;
   text-align: center;
   display: none;
+  padding-top: 50px;
 }
 
 @media(max-width:1800px){
@@ -239,11 +240,11 @@ nav a{
 }
 
 /* styling for well done message.  */
-
 .well-done {
   color: blue;
   text-align: center;
   display: none;
+  padding-top: 50px;
 }
 
 
