@@ -144,6 +144,7 @@ nav a{
 
 }
 
+/* well done message */
 .well-done {
   font-size: 5rem;
   color: blue;
@@ -155,50 +156,117 @@ nav a{
   height: 200px;
 }
 
-
-
-.small-star {
-  height: 30px;
-  display: inline-block;
-  /* vertical-align: middle; */
+@media (max-width:510px) {
+  .well-done img {
+    height: 100px;
+  }
 }
 
-.star-number {
-  float: left;
-}
-
+/* Styling for star score */
 #stars li {
-padding: 0 5px;
-display: inline-block;
-}
-
-
-.all-stars {
-  font-size: 5rem;
-  color: blue;
-  text-align: center;
-  display: none;
-}
-
-.complete {
-  height: 50px;
-}
-
-@media(max-width:768px){
-  #stars{
-    font-size: 1.5rem;
-  position: relative;
-  width: 30%;
-  margin: auto;
+  padding: 0 5px;
+  display: inline-block;
   }
 
 @media(max-width:480px){
   #stars{
     float: none;
   }
+}
 
-@media (max-width:480px) {
-  .well-done img {
-    height: 150px;
+@media(max-width:768px){
+  #stars{
+  font-size: 1.5rem;
+  position: relative;
+  width: 34%;   /*This changes the center for star score */
+  margin: auto;
+  }
+}
+
+.small-star {
+  height: 30px;
+  display: inline-block;
+}
+
+.star-number {
+  float: left;
+}
+
+
+/* styling for completion message after reaching 100 stars. */
+
+.all-stars {
+  color: blue;
+  text-align: center;
+  display: none;
+}
+
+@media(max-width:1800px){
+  .all-stars img{
+    height: 100px;
+    padding: 0 20px;
+  }
+
+@media(max-width:510px){
+  .all-stars img{
+    height: 25px;
+    padding: 0 5px;
+  }
+}
+
+@media(max-width:1800px){
+   .all-stars p {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width:510px){
+    .all-stars p {
+    font-size: 1rem;
+  }
+}
+
+  @media(max-width:1800px){
+    .all-stars h4{
+      font-size: 5rem;
+    }
+  }
+
+@media(max-width:510px){
+   .all-stars h4{
+    font-size: 2rem;
+  }
+}
+
+/* styling for well done message.  */
+
+.well-done {
+  color: blue;
+  text-align: center;
+  display: none;
+}
+
+
+@media(max-width:1800px){
+   .well-done p {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width:510px){
+    .well-done p {
+    font-size: 1rem;
+  }
+}
+
+  @media(max-width:1800px){
+    .well-done h4{
+      font-size: 5rem;
+    }
+  }
+
+@media(max-width:510px){
+   .well-done h4{
+    font-size: 2rem;
   }
 }

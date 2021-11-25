@@ -76,14 +76,18 @@ const number = parseFloat(this.textContent)
 //stars gained
 function starsGained() {
   // resetStars()
-  if (count === 5) {
+  if (count === 1) {
     //reset score to 0.
     document.querySelector(".star-number").textContent = "0/100";
-    resetScore();
-    // add stars to score.
+//Display well done completion message.
     document.querySelector(".wrapper").style.display="none";
     document.querySelector(".well-done").style.display="none";
     document.querySelector(".all-stars").style.display="block"
+//restart game at zero score.
+    setTimeout(function() {
+      resetScore();
+    }, 5000);
+
   } else if (count >0) {
   document.querySelector(".star-number").textContent = count + "/100";
   }
