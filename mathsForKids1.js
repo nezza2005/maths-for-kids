@@ -88,27 +88,62 @@ function starsGained() {
       resetScore();
     }, 3000);
 
+  } else if (count === 1) {
+    document.querySelector(".star-number").textContent = count + "/100";
+    document.querySelector(".wrapper").style.display="none";
+    document.querySelector(".info").style.display="block"
+
+  } else if (count === 10) {
+    document.querySelector(".star-number").textContent = count + "/100";
+    document.querySelector(".wrapper").style.display="none";
+    document.querySelector(".info").style.display="block"
+    document.querySelector(".info").textContent="10 stars, keep going!"
+    setTimeout(function() {
+      document.querySelector(".info").style.display="none"
+      document.querySelector(".wrapper").style.display="grid";
+    }, 2000);
+
+  } else if (count === 50) {
+    document.querySelector(".star-number").textContent = count + "/100";
+    document.querySelector(".wrapper").style.display="none";
+    document.querySelector(".info").style.display="block"
+    document.querySelector(".info").textContent="Half way to that TREAT!!"
+    setTimeout(function() {
+      document.querySelector(".info").style.display="none"
+      document.querySelector(".wrapper").style.display="grid";
+    }, 2000);
+
   } else if (count >0) {
-  document.querySelector(".star-number").textContent = count + "/100";
+    document.querySelector(".star-number").textContent = count + "/100";
   }
 }
 
+//Keeps star score depsite clicking on different html pages by using local storage.
 function keepScore(){
 
   localStorage.setItem("star-score", ++count);
   console.log(count);
 }
 
+//Resets star score at any time by deleting item saved in local storage.
 function resetScore() {
   window.localStorage.removeItem("star-score");
   document.querySelector(".star-number").textContent = "0/100";
   location.reload();
 }
 
+function returnToPlay() {
+  document.querySelector(".wrapper").style.display="grid";
+  document.querySelector(".well-done").style.display="none";
+  document.querySelector(".all-stars").style.display="none"
+  document.querySelector(".info").style.display="none"
+}
 
+
+
+//Listeners
 document.querySelector(".small-star").addEventListener("click", resetScore);
-
-
+document.querySelector(".info a").addEventListener("click", returnToPlay);
 
 
 

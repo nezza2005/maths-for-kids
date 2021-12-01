@@ -267,3 +267,21 @@ nav a{
     font-size: 1rem;
   }
 }
+
+/* info styling */
+/* styling for completion message after reaching 100 stars. */
+.info {
+  color: blue;
+  text-align: center;
+  display: none;
+  padding-top: 50px;
+}
+
+.info a {
+  color: blue;
+}
+
+.info a:hover {
+  cursor: pointer;
+  color: red;
+}
